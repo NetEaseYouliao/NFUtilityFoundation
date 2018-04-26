@@ -7,8 +7,9 @@ Pod::Spec.new do |s|
   s.homepage = "https://youliao.163yun.com/"
   s.description = "TODO: Add long description of the pod here."
   s.frameworks = ["UIKit", "CoreFoundation"]
-  s.source = { :path => '.' }
-
+  s.source = { :http => "https://github.com/NetEaseYouliao/NewsFeedsHybridSDK/raw/master/NewsFeedsHybridSDK/NewsFeedsHybridSDK-#{s.version}.zip" }
+  s.requires_arc = true
+  s.platform     = :ios
   s.ios.deployment_target    = '8.0'
-  s.ios.vendored_framework   = 'ios/NFUtilityFoundation.framework'
+  s.ios.vendored_framework   = 'NFUtilityFoundation.framework'
 end
