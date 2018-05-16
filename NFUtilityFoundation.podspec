@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "NFUtilityFoundation"
-  s.version      = '0.0.6'
+  s.version      = '0.0.7'
   s.summary      = "网易有料基础工具类"
   s.description  = <<-DESC
                    网易有料基础工具类
@@ -15,5 +15,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "8.0"
 
-  s.frameworks = 'UIKit', 'CoreFoundation'
+  s.frameworks = 'UIKit'
+
+  s.weak_frameworks = 'CoreFoundation'
 end
