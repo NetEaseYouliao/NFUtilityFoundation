@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "NFUtilityFoundation"
-  s.version      = '0.0.7'
+  s.version      = '0.0.8'
   s.summary      = "网易有料基础工具类"
   s.description  = <<-DESC
                    网易有料基础工具类
@@ -11,11 +11,14 @@ Pod::Spec.new do |s|
   s.source       = { :http => "https://github.com/NetEaseYouliao/NFUtilityFoundation/raw/master/NFUtilityFoundation/NFUtilityFoundation-#{s.version}.zip" }
   s.requires_arc = true
   s.platform     = :ios
-  s.vendored_frameworks ='NFUtilityFoundation.framework'
+  s.vendored_frameworks ='NFUtilityFoundation/NFUtilityFoundation.framework'
 
   s.ios.deployment_target = "8.0"
 
-  s.frameworks = 'UIKit'
+  s.resource     = 'NFUtilityFoundation/NFUtilityFoundationBundle.bundle'
 
-  s.weak_frameworks = 'CoreFoundation'
+  s.frameworks = 'UIKit', 'CoreFoundation'
+
+  s.dependency 'Masonry'
+
 end
